@@ -3,6 +3,7 @@ import java.lang.Math;
 import java.lang.reflect.Array;
 import java.util.Scanner;
 
+
 // 1672
 public class RichestCustomerWealth {
     public static void main(String[] args){
