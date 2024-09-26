@@ -1,0 +1,11 @@
+long,id,1
+java.lang.String,name,1
+com.epam.rd.autocode.assessment.appliances.model.Client,client,0
+com.epam.rd.autocode.assessment.appliances.model.Employee,employee,0
+com.epam.rd.autocode.assessment.appliances.model.Category,category,1
+java.lang.String,model,1
+com.epam.rd.autocode.assessment.appliances.model.Manufacturer,manufacturer,1
+com.epam.rd.autocode.assessment.appliances.model.PowerType,powerType,1
+java.lang.String,characteristic,1
+java.lang.String,description,1
+int,power,1

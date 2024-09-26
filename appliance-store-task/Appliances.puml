@@ -1,0 +1,95 @@
+@startuml
+
+User <|- Employee
+User <|- Client
+
+class User{
+-id:long
+-name:String
+-password:String
+-email:String
+}
+
+class Employee{
+-department:String
+}
+
+class Client{
+-card:String
+}
+
+class Manufacturer{
+-id:long
+-name:String
+}
+
+enum Category{
++BIG
++SMALL
+}
+
+enum PowerType {
++AC220
++AC110
++ACCUMULATOR
+}
+
+Appliance ||--|| Manufacturer
+Appliance ||--|| Category
+Appliance ||--|| PowerType
+class Appliance{
+-id:long
+-name:String
+-category:Category
+-model:String
+-manufacturer:Manufacturer
+-powerType:PowerType
+-characteristic:String
+-description:String
+-power:int
+}
+
+Order ||--|| Client
+Order ||--|| Employee
+class Order{
+-id:long
+-client:Client
+-employee:Employee
+-appliances:Map<Appliance,BigDecimal>
+}
+
+interface Add{
++addClients(Client)
++addEmployee(Employee)
++addManufacturer(Manufacturer)
++addOrder(Order)
++addAppliance(Appliance)
+}
+interface Find{
++Manufacturer findManufacturerById(long);
++Manufacturer findManufacturerByName(String);
++List<Order> findOrderByEmployee(Employee);
++Order findCheaperOrder();
++Order findExpensiveOrder();
+}
+interface Sort{
++Set<Manufacturer> sortManufacturersByName();
++Set<Order> sortOrderByClientId();
++Set<Appliance> sortAppliancesByCategory();
++Set<Order> sortOrderByAmount();
+}
+
+
+class Shop{
+-clients:Set<Client>
+-employees:Set<Employee>
+-manufacturers:Set<Manufacturer>
+-appliances:Set<Appliance>
+-orders:Set<Order>
+}
+
+Shop <|.. Add
+Shop <|.. Sort
+Shop <|.. Find
+
+@enduml
