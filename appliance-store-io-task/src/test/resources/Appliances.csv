@@ -1,0 +1,8 @@
+id,name,category,model,manufacturerId,powerType,characteristic,description,power
+1,Claw,BIG,----,1,ACCUMULATOR,------,---,600
+2,Bane,BIG,----,1,AC110,------,---,2200
+3,Ecu,SMALL,----,1,ACCUMULATOR,------,---,800
+4,Kang Dae,BIG,----,1,AC220,------,---,3600
+5,Gust,BIG,----,1,ACCUMULATOR,------,---,650
+6,Ancile,SMALL,----,1,AC220,------,---,2300
+7,Halo,BIG,----,1,ACCUMULATOR,------,---,300
